@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MovieItem from './MovieItem/MovieItem';
+import MovieCard from './MovieCard/MovieCard';
 
 const MovieList = ({ movies, handleLike, handleDelete }) => {
     return (
-        <div className="movie-list">
+        <div className="row">
             {movies.map(movie => (
-                <MovieItem 
-                    key={movie._id} 
-                    movie={movie} 
-                    handleLike={handleLike} 
-                    handleDelete={handleDelete} 
-                />
+                <div className="col-md-4" key={movie._id}>
+                    <MovieCard 
+                        movie={movie} 
+                        handleLike={handleLike} 
+                        handleDelete={handleDelete} 
+                    />
+                </div>
             ))}
         </div>
     );

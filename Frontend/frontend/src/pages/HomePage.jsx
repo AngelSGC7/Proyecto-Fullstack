@@ -53,7 +53,7 @@ const HomePage = () => {
 
     return (
         <div className="container mt-4">
-            <h2>Catálogo de Películas</h2>
+            <h2>Catalogo de Peliculas</h2>
             <MovieList movies={movies} handleLike={handleLike} handleDelete={handleDelete} />
         </div>
     );
